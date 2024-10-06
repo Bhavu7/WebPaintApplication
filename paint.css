@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Afacad Flux';
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #646464;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    max-width: 1050px;
+    /* gap: 10px; */
+    padding: 10px;
+}
+
+section{
+    background: white;
+    border-radius: 5px 0px 0px 5px;
+    -webkit-border-radius: 5px 0px 0px 5px;
+    -moz-border-radius: 5px 0px 0px 5px;
+    -ms-border-radius: 5px 0px 0px 5px;
+    -o-border-radius: 5px 0px 0px 5px;
+    border: 1px solid #489a48;
+}
+
+#db{
+    border-radius: 0px 5px 5px 0px;
+    -webkit-border-radius: 0px 5px 5px 0px;
+    -moz-border-radius: 0px 5px 5px 0px;
+    -ms-border-radius: 0px 5px 5px 0px;
+    -o-border-radius: 0px 5px 5px 0px;
+    border: 1px solid #489a48;
+}
+
+.tools-board{
+    width: 210px;
+    padding: 15px 22px 0px;
+}
+
+.tools-board .row{
+    margin-bottom: 20px;
+}
+
+.row .title{
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.row .options{
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+
+.row .options .option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.options .option img{
+    height: 20px;
+    width: 20px;
+}
+
+.option:is(:hover, .active) img{
+    filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+    -webkit-filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+
+.option :where(span,label){
+    color: #5a5a5a;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.option:is(:hover, .active) :where(span,label){
+    color: #489a48;
+}
+
+.option #fill-color{
+    height: 14px;
+    width: 14px;
+    cursor: pointer;
+}
+
+#fill-color:checked label{
+    color: #489a48;
+}
+
+.option #size-slider{
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+}
+
+.colors .options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colors .option{
+    height: 20px;
+    width: 20px;
+    margin-top: 3px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: relative;
+}
+
+.colors .option:nth-child(1){
+    background-color: red;
+}
+
+.colors .option:nth-child(2){
+    background-color: rgb(0, 197, 56);
+}
+
+.colors .option:nth-child(3){
+    background-color: dodgerblue;
+}
+
+.colors .option:nth-child(4){
+    background-color: rgb(0, 0, 0);
+}
+
+.colors .option:nth-child(5){
+    background-color: rgba(255, 255, 255, 0.849);
+    border: 1px solid gray;
+}
+
+.colors .option.selected::before{
+    position: absolute;
+    content: " ";
+    top: 50%;
+    left: 50%;
+    height: 12px;
+    width: 12px;
+    background: inherit;
+    border: 2px solid #fff;
+    border-radius: inherit;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -ms-border-radius: inherit;
+    -o-border-radius: inherit;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.colors .option:last-child.selected::before{
+    border-color: #ccc;
+}
+
+.option #color-picker{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.buttons button{
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 11px 0;
+    margin-bottom: 13px;
+    background: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons .clear-button{
+    color: #6C757D;
+    border: 1px solid #6C757D;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.clear-button:hover{
+    color: #fff;
+    background: #6C757D;
+}
+
+.buttons .download-button{
+    background: #489a48;
+    border: 1px solid #489a48;
+}
+
+.drawing-board{
+    flex: 1;
+}
+
+.drawing-board canvas{
+    width: 100%;
+    height: 100%;
+}
