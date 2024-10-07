@@ -5,4 +5,6 @@
 <h3>You can clear canvas in one click and download as image directly in your device.</h3>
 &nbsp&nbsp
 <h2>Kidly visit and experience the web paint app developed by <b>ME</b></h2>
-<link href="https://bhavu7.github.io/WebPaintApplication/">
+
+<h2>Click Below to view👇</h2>
+https://bhavu7.github.io/WebPaintApplication/
